@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
+const port = (process.env.PORT || 3000);
 const googleRouter = require('./routes/user.googlesignin');
 const mongoose = require('mongoose');
 const { response } = require('express');
@@ -23,7 +24,7 @@ app.use(bodyParser.json());
 app.use("/user", googleRouter);
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is running');
 
 })
