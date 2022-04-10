@@ -6,9 +6,9 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String
     },
-    // passord: {
-    //     type: String
-    // },
+    provider: {
+        type: String
+    },
     date: {
         type: Date,
         default: Date.now
